@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--WidgeBtn样式-->
+    <style name="style_widget_btn">
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!--文本样式-->
+    <style name="style_text_item">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!--navigation标题样式-->
+    <style name="style_nav_title_item" parent="style_text_item">
+        <item name="android:textSize">@dimen/navigation_text_size</item>
+        <item name="android:textColor">@color/navigation_title_text_color</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+    </style>
+
+    <!--navigation两端按钮样式-->
+    <style name="style_widget_item" parent="style_text_item">
+        <item name="android:textSize">@dimen/widget_text_size</item>
+        <item name="android:textColor">@color/navigation_widge_text_color</item>
+        <item name="android:minWidth">@dimen/widget_view_size</item>
+    </style>
+
+</resources>

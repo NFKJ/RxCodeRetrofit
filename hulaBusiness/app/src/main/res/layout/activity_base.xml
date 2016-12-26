@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.common.widget.RevealLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <com.common.widget.navigation.NavigationBar
+        android:id="@+id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <FrameLayout
+        android:id="@+id/appContent"
+        android:layout_below="@id/navigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignWithParentIfMissing="true" />
+
+</com.common.widget.RevealLayout>

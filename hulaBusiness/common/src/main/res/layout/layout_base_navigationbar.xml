@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:id="@+id/title" >
+
+    <ImageView
+        android:id="@+id/ivBg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navigation_content_size"
+        android:background="@color/navigation_background_color"
+        android:scaleType="fitXY" />
+
+	<View
+		android:id="@+id/ivGap"
+		android:layout_below="@id/ivBg"
+		android:layout_width="match_parent"
+		android:background="@color/navigation_gapfirst_color"
+		android:layout_height="0.5dp" />
+
+	<View
+		android:layout_below="@id/ivGap"
+		android:layout_width="match_parent"
+		android:background="@color/navigation_gapnext_color"
+		android:layout_height="0.5dp" />
+
+    <FrameLayout
+        android:id="@+id/flLeftMenuBar"
+		android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+
+	    <TextView
+	        android:id="@+id/tvContentLeft"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+			android:padding="@dimen/widget_padding_size"
+			style="@style/style_widget_item"
+			android:visibility="gone"/>
+	
+	    <RelativeLayout
+	        android:id="@+id/rlLeftMenuBar"
+	        android:layout_width="wrap_content"
+			android:gravity="left"
+			android:minWidth="@dimen/widget_view_size"
+	        android:layout_height="match_parent"
+	        android:visibility="gone" >
+	    </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flRightMenuBar"
+        android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+        android:layout_alignParentRight="true" >
+
+		<TextView
+			android:id="@+id/tvContentRight"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:padding="@dimen/widget_padding_size"
+			style="@style/style_widget_item"
+			android:visibility="gone" />
+
+		<RelativeLayout
+			android:id="@+id/rlRightMenuBar"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:gravity="right"
+			android:minWidth="@dimen/widget_view_size"
+			android:visibility="gone" >
+		</RelativeLayout>
+
+    </FrameLayout>
+
+	<FrameLayout
+		android:id="@+id/flCenterTitle"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="@dimen/navigation_side_max_size"
+		android:layout_marginRight="@dimen/navigation_side_max_size" >
+
+		<RelativeLayout
+			android:id="@+id/rlTitleContent"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="horizontal" >
+
+			<TextView
+				android:id="@+id/tvTitle"
+				android:layout_centerHorizontal="true"
+				style="@style/style_nav_title_item"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent" />
+
+			<ImageView
+				android:id="@+id/ivTitleImg"
+				android:visibility="gone"
+				android:layout_toRightOf="@id/tvTitle"
+				android:padding="@dimen/margin_size_4"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent" />
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:id="@+id/rlCenterMenuBar"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:visibility="gone" >
+
+		</RelativeLayout>
+
+	</FrameLayout>
+
+</RelativeLayout>

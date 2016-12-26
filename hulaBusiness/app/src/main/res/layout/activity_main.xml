@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:nav="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/main_tab_height"/>
+
+    <com.common.widget.tablayout.BottomTabLayout
+        android:layout_width="match_parent"
+        android:background="#f5f5f5"
+        android:id="@+id/tab_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_height="@dimen/main_tab_height"
+        nav:nav_textSelectColor="@color/colorPrimary"
+        nav:nav_textUnselectColor="#8E9094"
+        nav:nav_textsize="11sp"/>
+
+</RelativeLayout>
