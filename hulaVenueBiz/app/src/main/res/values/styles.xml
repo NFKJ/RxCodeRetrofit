@@ -1,0 +1,117 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base" />
+    <!-- Customize your theme here. -->
+
+    <!--splash全屏解决启动黑白屏-->
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="BaseCustomButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/view_size_45</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_selector</item>
+    </style>
+
+    <!--一级按钮样式 蓝色底-->
+    <style name="CustomButton" parent="BaseCustomButton">
+        <item name="android:background">@drawable/btn_selector</item>
+    </style>
+
+    <!--一级按钮样式 绿色底-->
+    <style name="CustomGButton" parent="BaseCustomButton">
+        <item name="android:background">@drawable/btn_green_selector</item>
+    </style>
+
+    <style name="CustomFrame">
+        <item name="android:layout_marginLeft">@dimen/view_size_38</item>
+        <item name="android:layout_marginRight">@dimen/view_size_38</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/view_size_45</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="inputView_style">
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/c_333333</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColorHint">@color/c_c4c4c4</item>
+    </style>
+
+    <style name="CustomInput">
+        <item name="android:textSize">@dimen/text_size_15</item>
+        <item name="android:textColor">@color/c_333333</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:lines">1</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColorHint">@color/c_c7c7c7</item>
+    </style>
+
+    <style name="CustomTitleText">
+        <item name="android:maxLines">1</item>
+        <item name="android:lines">1</item>
+        <item name="android:textSize">@dimen/text_size_17</item>
+        <item name="android:textColor">@color/selector_text_color</item>
+    </style>
+
+    <!--普通item功能条样式-->
+    <style name="CustomTitleItem" parent="CustomItem">
+        <item name="android:drawableRight">@mipmap/icon_next</item>
+        <item name="android:drawablePadding">@dimen/view_size_14</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="CustomItem">
+        <item name="android:maxLines">1</item>
+        <item name="android:lines">1</item>
+        <item name="android:paddingLeft">@dimen/view_size_14</item>
+        <item name="android:paddingRight">@dimen/view_size_8</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/c_333333</item>
+        <item name="android:background">@drawable/item_selector</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/view_size_50</item>
+    </style>
+
+    <!--消息用到star-->
+    <style name="MyLineStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/item_selector</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/view_size_120p</item>
+        <item name="android:paddingLeft">@dimen/view_size_20p</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="MyLineText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/view_size_30p</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/c_333333</item>
+        <item name="android:textSize">@dimen/view_size_32p</item>
+    </style>
+    <!--消息用到end-->
+
+    <style name="line_d8d8d8">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/view_size_1p</item>
+        <item name="android:background">@color/c_D8D8D8</item>
+    </style>
+</resources>

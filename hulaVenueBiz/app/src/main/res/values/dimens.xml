@@ -1,0 +1,49 @@
+<resources>
+    <dimen name="main_tab_height">49dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="view_size_392p">392px</dimen>
+    <dimen name="view_size_192p">192px</dimen>
+    <dimen name="view_size_182p">182px</dimen>
+    <dimen name="view_size_140p">140px</dimen>
+    <dimen name="view_size_136p">136px</dimen>
+    <dimen name="view_size_120p">120px</dimen>
+    <dimen name="view_size_110p">110px</dimen>
+    <dimen name="view_size_105p">105px</dimen>
+    <dimen name="view_size_95p">95px</dimen>
+    <dimen name="view_size_89p">89px</dimen>
+    <dimen name="view_size_88p">88px</dimen>
+    <dimen name="view_size_80p">80px</dimen>
+    <dimen name="view_size_75p">75px</dimen>
+    <dimen name="view_size_54p">54px</dimen>
+    <dimen name="view_size_53p">53px</dimen>
+    <dimen name="view_size_49p">49px</dimen>
+    <dimen name="view_size_42p">42px</dimen>
+    <dimen name="view_size_38p">38px</dimen>
+    <dimen name="view_size_36p">36px</dimen>
+    <dimen name="view_size_37p">37px</dimen>
+    <dimen name="view_size_35p">35px</dimen>
+    <dimen name="view_size_34p">34px</dimen>
+    <dimen name="view_size_33p">33px</dimen>
+    <dimen name="view_size_32p">32px</dimen>
+    <dimen name="view_size_31p">31px</dimen>
+    <dimen name="view_size_30p">30px</dimen>
+    <dimen name="view_size_28p">28px</dimen>
+    <dimen name="view_size_27p">27px</dimen>
+    <dimen name="view_size_26p">26px</dimen>
+    <dimen name="view_size_25p">25px</dimen>
+    <dimen name="view_size_24p">24px</dimen>
+    <dimen name="view_size_22p">22px</dimen>
+    <dimen name="view_size_21p">21px</dimen>
+    <dimen name="view_size_20p">20px</dimen>
+    <dimen name="view_size_18p">18px</dimen>
+    <dimen name="view_size_15p">15px</dimen>
+    <dimen name="view_size_11p">11px</dimen>
+    <dimen name="view_size_10p">10px</dimen>
+    <dimen name="view_size_8p">8px</dimen>
+    <dimen name="view_size_5p">5px</dimen>
+    <dimen name="view_size_2p">2px</dimen>
+    <dimen name="view_size_1p">1px</dimen>
+</resources>

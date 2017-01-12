@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f5f5f5"
+    android:orientation="vertical"
+    tools:context="com.hulaVenueBiz.ui.check.PlaceOrdeActivity">
+
+    <com.common.widget.pulltorefresh.XRecyclerView
+        android:id="@+id/pulltoRefreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn_yanzhen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_size_89p"
+        android:background="@drawable/btn_selector_noradius"
+        android:textColor="@color/white"
+        android:textSize="@dimen/view_size_30p"
+        android:text="验票" />
+</LinearLayout>

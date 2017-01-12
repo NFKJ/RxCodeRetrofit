@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:src="@mipmap/bg_phone"
+        android:scaleType="centerCrop"
+        android:layout_weight="1"
+        android:background="@color/base_color"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_size_195">
+
+        <Button
+            android:id="@+id/btn_qrcode"
+            android:layout_marginTop="@dimen/view_size_50"
+            android:layout_marginLeft="@dimen/view_size_35"
+            android:layout_marginRight="@dimen/view_size_35"
+            android:text="@string/string_check_qrcode"
+            style="@style/CustomButton"/>
+
+        <TextView
+            android:id="@+id/tv_incode"
+            android:text="@string/string_check_input"
+            android:layout_below="@id/btn_qrcode"
+            android:layout_marginTop="@dimen/view_size_25"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/icon_handle"
+            android:layout_width="wrap_content"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/text_size_16"
+            android:layout_height="@dimen/view_size_25"/>
+    </RelativeLayout>
+</LinearLayout>

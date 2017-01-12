@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:nav="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/main_tab_height"/>
+
+    <com.common.widget.tablayout.BottomTabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_height="@dimen/main_tab_height"
+        nav:nav_iconWidth="@dimen/tab_image_size"
+        nav:nav_iconHeight="@dimen/tab_image_size"
+        nav:nav_textSelectColor="@color/base_color"
+        nav:nav_textUnselectColor="@color/c_8c8c8c"
+        nav:nav_textsize="@dimen/tab_text_size"/>
+
+    <View
+        android:layout_above="@id/tab_layout"
+        android:layout_width="match_parent"
+        android:background="@color/c_d5d5d5"
+        android:layout_height="@dimen/view_size_0.5"/>
+
+</RelativeLayout>

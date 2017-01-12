@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.qrcode.core.ZXingView
+        android:id="@+id/zv_scan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:qrcv_animTime="1500"
+        app:qrcv_barCodeTipText="@string/string_qrcode_notice"
+        app:qrcv_barcodeRectHeight="150dp"
+        app:qrcv_borderColor="@color/white"
+        app:qrcv_borderSize="1dp"
+        app:qrcv_cornerColor="@color/base_color"
+        app:qrcv_cornerLength="20dp"
+        app:qrcv_cornerSize="3dp"
+        app:qrcv_customScanLineDrawable="@mipmap/scan_icon_scanline"
+        app:qrcv_isBarcode="false"
+        app:qrcv_isCenterVertical="false"
+        app:qrcv_isOnlyDecodeScanBoxArea="false"
+        app:qrcv_isScanLineReverse="true"
+        app:qrcv_isShowDefaultGridScanLineDrawable="false"
+        app:qrcv_isShowDefaultScanLineDrawable="true"
+        app:qrcv_isShowTipBackground="false"
+        app:qrcv_isShowTipTextAsSingleLine="true"
+        app:qrcv_isTipTextBelowRect="true"
+        app:qrcv_maskColor="#33FFFFFF"
+        app:qrcv_rectWidth="315dp"
+        app:qrcv_scanLineColor="@color/base_color"
+        app:qrcv_scanLineMargin="0dp"
+        app:qrcv_scanLineSize="@dimen/view_size_0.5"
+        app:qrcv_tipTextColor="@color/white"
+        app:qrcv_tipTextSize="@dimen/text_size_14"
+        app:qrcv_toolbarHeight="0dp"
+        app:qrcv_topOffset="150dp"/>
+
+    <Space
+        android:id="@+id/m_statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <RelativeLayout
+        android:layout_below="@id/m_statusBar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navigation_view_size">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:padding="@dimen/view_size_13"
+            android:src="@mipmap/icon_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:text="@string/string_qrcode"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            style="@style/style_nav_title_item"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_input"
+        android:text="@string/string_check_input"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/view_size_240"
+        android:gravity="center_vertical"
+        android:drawableLeft="@mipmap/icon_handle"
+        android:layout_width="wrap_content"
+        android:textColor="@color/base_color"
+        android:textSize="@dimen/text_size_16"
+        android:layout_height="@dimen/view_size_25"/>
+
+</RelativeLayout>

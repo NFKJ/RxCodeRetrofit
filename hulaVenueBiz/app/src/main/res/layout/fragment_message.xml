@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f5f5f5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llayout_sys"
+        style="@style/MyLineStyle">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/view_size_8p"
+                android:src="@mipmap/icon_system" />
+
+            <ImageView
+                android:id="@+id/iv_red_sys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@mipmap/icon_red"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <TextView
+            style="@style/MyLineText"
+            android:text="@string/string_message_sys" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llayout_ord"
+        android:layout_marginTop="1dp"
+        style="@style/MyLineStyle">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/view_size_8p"
+                android:src="@mipmap/icon_orders" />
+
+            <ImageView
+                android:id="@+id/iv_red_ord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@mipmap/icon_red"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <TextView
+            style="@style/MyLineText"
+            android:text="@string/string_message_ord" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llayout_ding"
+        android:layout_marginTop="1dp"
+        style="@style/MyLineStyle">
+
+        <TextView
+            style="@style/MyLineText"
+            android:text="场地预定" />
+    </LinearLayout>
+</LinearLayout>

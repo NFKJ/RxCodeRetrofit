@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/view_background_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--基础信息-->
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_size_192p">
+            
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="@dimen/view_size_22p"
+                android:layout_marginTop="@dimen/view_size_27p"
+                android:layout_marginBottom="@dimen/view_size_27p"
+                android:layout_marginRight="@dimen/view_size_25p"
+                android:background="@color/base_color"
+                android:layout_width="@dimen/view_size_192p"
+                android:layout_height="@dimen/view_size_140p"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_marginRight="@dimen/view_size_32p"
+                android:layout_marginTop="@dimen/view_size_38p"
+                android:layout_toRightOf="@id/iv_logo"
+                android:textSize="@dimen/view_size_32p"
+                android:text="i am a test text"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_marginRight="@dimen/view_size_32p"
+                android:layout_marginTop="@dimen/view_size_24p"
+                android:layout_toRightOf="@id/iv_logo"
+                android:layout_below="@id/tv_title"
+                android:textSize="@dimen/view_size_26p"
+                android:text="i am a test text i am a test text i am a test text i am a test text i am a test text i am a test texti am a test text "
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <!--营业时间-->
+        <LinearLayout
+            android:layout_marginTop="@dimen/view_size_30p"
+            android:padding="@dimen/view_size_30p"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/string_info_time"
+                android:textSize="@dimen/view_size_30p"
+                android:textColor="@color/c_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_marginTop="@dimen/view_size_22p"
+                android:text="@string/string_info_time"
+                android:textSize="@dimen/view_size_28p"
+                android:textColor="@color/c_666666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!--场馆电话-->
+        <LinearLayout
+            android:layout_marginTop="@dimen/view_size_30p"
+            android:padding="@dimen/view_size_30p"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/string_info_phone"
+                android:textSize="@dimen/view_size_30p"
+                android:textColor="@color/c_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_marginTop="@dimen/view_size_22p"
+                android:textSize="@dimen/view_size_28p"
+                android:textColor="@color/c_666666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!--主营项目-->
+        <LinearLayout
+            android:layout_marginTop="@dimen/view_size_30p"
+            android:padding="@dimen/view_size_30p"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/string_info_object"
+                android:textSize="@dimen/view_size_30p"
+                android:textColor="@color/c_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_object"
+                android:layout_marginTop="@dimen/view_size_22p"
+                android:textSize="@dimen/view_size_28p"
+                android:textColor="@color/c_666666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!--场馆服务-->
+        <LinearLayout
+            android:layout_marginTop="@dimen/view_size_30p"
+            android:padding="@dimen/view_size_30p"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/string_info_service"
+                android:textSize="@dimen/view_size_30p"
+                android:layout_marginBottom="@dimen/view_size_20p"
+                android:textColor="@color/c_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.common.widget.imageview.XCFlowLayout
+                android:id="@+id/fl_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <!--场馆介绍-->
+        <LinearLayout
+            android:layout_marginTop="@dimen/view_size_30p"
+            android:padding="@dimen/view_size_30p"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/string_info_introduce"
+                android:textSize="@dimen/view_size_30p"
+                android:textColor="@color/c_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_introduce"
+                android:layout_marginTop="@dimen/view_size_22p"
+                android:text="@string/string_info_time"
+                android:textSize="@dimen/view_size_28p"
+                android:textColor="@color/c_666666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

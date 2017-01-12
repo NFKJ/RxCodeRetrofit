@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f5f5f5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/view_size_15"
+        android:paddingRight="@dimen/view_size_15"
+        android:layout_height="@dimen/view_size_50">
+
+        <TextView
+            android:text="@string/string_pwd_old"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/text_size_15"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"/>
+
+        <com.common.widget.editview.DeleteEditText
+            android:id="@+id/ev_oldpwd"
+            android:layout_weight="5"
+            android:hint="@string/string_pwdhint_old"
+            style="@style/CustomInput"
+            android:inputType="textPassword"
+            android:layout_width="0dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/view_size_1"
+        android:paddingLeft="@dimen/view_size_15"
+        android:paddingRight="@dimen/view_size_15"
+        android:layout_height="@dimen/view_size_50">
+
+        <TextView
+            android:text="@string/string_pwd_new"
+            android:layout_weight="2"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/text_size_15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <com.common.widget.editview.DeleteEditText
+            android:id="@+id/ev_newpwd"
+            android:layout_weight="5"
+            android:hint="@string/string_pwdhint_new"
+            android:inputType="textPassword"
+            style="@style/CustomInput"
+            android:layout_width="0dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/view_size_1"
+        android:paddingLeft="@dimen/view_size_15"
+        android:paddingRight="@dimen/view_size_15"
+        android:layout_height="@dimen/view_size_50">
+
+        <TextView
+            android:text="@string/string_pwd_comfire"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/text_size_15"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"/>
+
+        <com.common.widget.editview.DeleteEditText
+            android:id="@+id/ev_pwdconfirm"
+            android:layout_weight="5"
+            android:hint="@string/string_pwdhint_con"
+            android:inputType="textPassword"
+            style="@style/CustomInput"
+            android:layout_width="0dp" />
+    </LinearLayout>
+
+    <Space
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_marginBottom="@dimen/view_size_30"
+        android:layout_marginLeft="@dimen/view_size_36"
+        android:layout_marginRight="@dimen/view_size_36"
+        android:text="@string/app_confirm"
+        style="@style/CustomGButton" />
+</LinearLayout>

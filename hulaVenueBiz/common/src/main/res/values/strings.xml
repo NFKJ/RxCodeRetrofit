@@ -1,0 +1,5 @@
+<resources>
+    <string name="string_setting_notice">场馆公告维护信息</string>
+    <string name="app_sure">确定</string>
+    <string name="app_cancel">取消</string>
+</resources>

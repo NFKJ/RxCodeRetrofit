@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Base"/>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/base_color</item>
+        <item name="colorPrimaryDark">@color/base_color</item>
+        <item name="colorAccent">@color/base_color</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <!--状态栏显示与导航栏同色方案-->
+    <style name="TranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar"/>
+
+    <!--纯图片状态栏不遮挡-->
+    <style name="ImageTranslucentTheme" parent="Theme.AppCompat.Light.DarkActionBar"/>
+
+    <style name="DialogFragment" parent="ImageTranslucentTheme">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/BottomToTopAnim</item>
+    </style>
+
+    <!--WidgeBtn样式-->
+    <style name="style_widget_btn">
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!--文本样式-->
+    <style name="style_text_item">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!--navigation标题样式-->
+    <style name="style_nav_title_item" parent="style_text_item">
+        <item name="android:textSize">@dimen/navigation_text_size</item>
+        <item name="android:textColor">@color/navigation_title_text_color</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+    </style>
+
+    <!--navigation两端按钮样式-->
+    <style name="style_widget_item" parent="style_text_item">
+        <item name="android:background">@drawable/selector_frame_white</item>
+        <item name="android:textSize">@dimen/widget_text_size</item>
+        <item name="android:textColor">@color/navigation_widge_text_color</item>
+        <item name="android:minWidth">@dimen/widget_view_size</item>
+        <item name="android:layout_margin">@dimen/view_size_15</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- loading 样式 -->
+    <style name="loadstyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/bg_base_progress</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- 等待中提示样式 -->
+    <style name="MyLoadingDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- Dialog样式 -->
+    <style name="dialog_contact" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item> <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item> <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item> <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item> <!-- 无标题 -->
+        <item name="android:windowBackground">@drawable/shape_bg_dialog</item> <!-- 自己想要的背景 -->
+        <item name="android:backgroundDimEnabled">true</item> <!-- 模糊 -->
+    </style>
+</resources>

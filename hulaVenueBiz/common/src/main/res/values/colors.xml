@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  general color -->
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#5a5a5a</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#0000FF</color>
+    <color name="gray">#ff333333</color>
+    <color name="orange">#ff991c</color>
+    <color name="green">#48d99a</color>
+    <color name="green_press">#a048d99a</color>
+    <color name="c_333333">#333333</color>
+    <color name="textcolorrowlines">#C4C4C4</color> <!-- iphone颜色分割线 -->
+
+    <!--  general color end -->
+
+    <!--app整体基调色-->
+    <color name="base_text_color">#909090</color>
+    <color name="base_loading_background">@color/view_background_color</color>
+
+    <color name="base_color">#0396eb</color>
+    <color name="base_color_press">#a00396eb</color>
+    <!--页面背景颜色-->
+    <color name="view_background_color">#f5f5f5</color>
+    <!--分割线颜色-->
+    <color name="view_gapline_color">#e5e5e5</color>
+
+    <!--导航栏背景颜色-->
+    <color name="navigation_title_text_color">@color/white</color>
+    <color name="navigation_widge_text_color">@color/selector_white_color</color>
+    <color name="navigation_background_color">@color/base_color</color>
+    <color name="navigation_gapfirst_color">#cbcbcb</color>
+    <color name="navigation_gapnext_color">#e3e3e3</color>
+
+    <!--导航栏按钮颜色-->
+    <color name="navigation_button_color">@color/base_color</color>
+    <color name="navigation_title_color">#5d5d5d</color>
+
+    <!--圆点指示器颜色-->
+    <color name="normal_circle_indicator">#888</color>
+    <color name="selected_circle_indicator">@color/white</color>
+
+    <!--白色背景按下去的颜色-->
+    <color name="white_press">#10000000</color>
+</resources>

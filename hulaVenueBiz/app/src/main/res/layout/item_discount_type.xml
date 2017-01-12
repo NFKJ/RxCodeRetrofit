@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_type"
+    android:gravity="center"
+    android:layout_margin="@dimen/view_size_15p"
+    android:background="@drawable/shape_discount_type_normal"
+    android:textSize="@dimen/view_size_38p"
+    android:layout_width="@dimen/view_size_80p"
+    android:layout_height="@dimen/view_size_80p"/>

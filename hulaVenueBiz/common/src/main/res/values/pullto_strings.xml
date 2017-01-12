@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 下拉刷新和上拉加载更多的文本 -->
+    <string name="pull_down_text">下拉刷新</string>
+    <string name="pull_down_release_text">释放刷新</string>
+    <string name="pull_down_loading_text">正在刷新</string>
+    <string name="pull_up_text">加载中...</string>
+</resources>

@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">呼啦场馆商户版</string>
+    <string name="app_back">返回</string>
+    <string name="app_confirm">确认</string>
+    <string name="app_save">保存</string>
+
+    <string name="string_login_account">请输入用户名</string>
+    <string name="string_login_pwd">请输入登录密码</string>
+    <string name="string_login_btn">用户登录</string>
+    <string name="string_login_register">申请入驻</string>
+
+    <string name="string_qrcode_input">请输入条形码编号</string>
+    <string name="string_loadText">加载中</string>
+    <string name="string_qrcode">扫码验票</string>
+    <string name="string_qrcode_notice">放入框内即可自动扫码</string>
+    <string name="string_check_qrcode">扫描条形码验票</string>
+    <string name="string_check_input">手动输入</string>
+
+    <string name="string_mine_detailinfo">场馆基本资料</string>
+    <string name="string_mine_discount">场馆优惠信息</string>
+    <string name="string_mine_notice">场馆公告维护</string>
+    <string name="string_mine_call">呼啦服务热线</string>
+    <string name="string_mine_logout">退出登录</string>
+    <string name="string_mine_pwd">修改密码</string>
+
+    <string name="string_pwd_title">修改密码</string>
+    <string name="string_pwd_old">原密码</string>
+    <string name="string_pwd_new">新密码</string>
+    <string name="string_pwd_comfire">确认新密码</string>
+    <string name="string_pwdhint_old">请输入原密码</string>
+    <string name="string_pwdhint_new">请输入新密码</string>
+    <string name="string_pwdhint_con">再次输入密码</string>
+
+    <string name="string_info_time">营业时间</string>
+    <string name="string_info_phone">场馆电话</string>
+    <string name="string_info_object">主营运动项目</string>
+    <string name="string_info_service">场馆服务</string>
+    <string name="string_info_introduce">场馆介绍</string>
+    <string name="string_course">课程</string>
+    <string name="string_message_sys">系统消息</string>
+    <string name="string_message_ord">订单消息</string>
+    <string name="string_place_order">场地预订信息</string>
+    <string name="string_notice_title">场馆公告维护</string>
+    <string name="string_notice_hint">场馆公告维护信息</string>
+    <string name="string_detailinfo_title">场馆基本资料</string>
+    <string name="string_codein_title">手动输入</string>
+    <string name="string_regoster_title">申请入驻</string>
+
+    <string name="string_login_t_input">请输入账号</string>
+    <string name="string_login_t_pwd">请输入密码</string>
+    <string name="string_login_t_success">登录成功</string>
+    <string name="string_login_t_failed">登录失败</string>
+
+    <string name="string_notice_tips">输入框为空则表示没有场馆公告</string>
+    <string name="string_notice_count">0/140</string>
+
+    <string name="string_discount_title">场馆优惠信息</string>
+    <string name="string_discount_count">0/10</string>
+    <string name="string_discount_msg">优惠信息</string>
+    <string name="string_discount_hint">优惠详情</string>
+    <string name="string_discount_icon">优惠图标</string>
+    <string name="string_discount_check">(必选)</string>
+    <string name="string_update_title">升级提示</string>
+    <string name="string_update_content">发现新版本请及时更新</string>
+    <string name="string_fragment_check">验票</string>
+    <string name="string_fragment_message">消息</string>
+    <string name="string_fragment_mine">我的</string>
+    <string name="string_permission">应用需要相关权限</string>
+    <string name="string_dialog_title">温馨提示</string>
+    <string name="string_pwd_success">密码修改成功</string>
+    <string name="string_notice_success">公告编辑成功</string>
+</resources>

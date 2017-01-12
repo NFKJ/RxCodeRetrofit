@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lean="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/rv_layout"
+    android:background="@color/view_background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_nostatus_navigation"/>
+
+    <LinearLayout
+        android:layout_below="@id/title"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <com.common.widget.editview.DeleteEditText
+            android:id="@+id/et_code"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/view_size_15"
+            android:layout_marginRight="@dimen/view_size_15"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:focusableInTouchMode="true"
+            android:hint="@string/string_qrcode_input"
+            android:maxLines="1"
+            android:textSize="@dimen/text_size_16"
+            android:textColorHint="@color/c_cccccc"
+            android:background="@drawable/shape_frame_editview"
+            android:digits="0123456789"
+            android:imeOptions="actionSearch"
+            android:inputType="phone"
+            lean:del_logo_size="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_size_45"/>
+    </LinearLayout>
+
+</RelativeLayout>
