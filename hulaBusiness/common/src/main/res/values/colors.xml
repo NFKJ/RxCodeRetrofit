@@ -11,6 +11,9 @@
     <!--  general color end -->
 
     <!--app整体基调色-->
+    <color name="base_text_color">#909090</color>
+    <color name="base_loading_background">@color/view_background_color</color>
+
     <color name="base_color">#5dd27b</color>
     <color name="base_color_press">#a05dd27b</color>
     <!--页面背景颜色-->

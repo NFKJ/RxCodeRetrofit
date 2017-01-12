@@ -3,6 +3,7 @@
           package="com.hulabusiness">
 
     <application
+        android:name=".base.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,8 +19,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.MainActivity"/>
-        <activity android:name=".ui.part1.FirstTestActivity">
+        <activity android:name=".ui.check.FirstTestActivity">
+        </activity>
+        <activity android:name=".ui.message.WebTestActivity">
         </activity>
     </application>
 
+    <!-- 网络 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 </manifest>

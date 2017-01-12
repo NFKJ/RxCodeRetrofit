@@ -56,4 +56,13 @@
     <!--上部导航栏两侧按钮-->
     <style name="Widget.WidgeButton" parent="@android:style/Widget"/>
 
+    <!--预加载界面-->
+    <declare-styleable name="LoadingLayout">
+        <attr name="isFirstVisible" format="boolean"/>
+    </declare-styleable>
+
+    <!--带删除图标的输入框-->
+    <declare-styleable name="DeleteEditView">
+        <attr name="del_logo_size" format="dimension" />
+    </declare-styleable>
 </resources>

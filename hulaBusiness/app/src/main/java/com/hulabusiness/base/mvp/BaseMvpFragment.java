@@ -2,15 +2,16 @@ package com.hulabusiness.base.mvp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
-import com.common.widget.RevealLayout;
+import com.common.widget.loadingView.LoadingLayout;
 import com.common.widget.navigation.NavigationBar;
 import com.hulabusiness.R;
 import com.hulabusiness.base.listener.OnOnceClickListener;
@@ -28,8 +29,8 @@ public abstract class BaseMvpFragment<P extends BasePresenter>
     protected Context context;
 
     private NavigationBar m_navigationBar;
-    private FrameLayout m_contentView;
-    private RevealLayout m_root;
+    private LoadingLayout m_contentView;
+    private LinearLayout m_root;
 
     /**
      * 缓存Fragment view
@@ -81,8 +82,8 @@ public abstract class BaseMvpFragment<P extends BasePresenter>
     }
 
     private void initRootView() {
-        m_root = (RevealLayout) contentView.findViewById(R.id.root);
-        m_contentView = (FrameLayout) contentView.findViewById(R.id.appContent);
+        m_root = (LinearLayout) contentView.findViewById(R.id.root);
+        m_contentView = (LoadingLayout) contentView.findViewById(R.id.appContent);
         m_navigationBar = (NavigationBar) contentView.findViewById(R.id.navigationBar);
     }
 
@@ -123,11 +124,28 @@ public abstract class BaseMvpFragment<P extends BasePresenter>
 
     }
 
+    public void startActivity(Class<?> cls)
+    {
+        startActivity(cls, null);
+    }
+
     /**
-     * Invoke the method after you have implemented method {@link BaseMvpFragment#onViewClicked(View, int)}
-     *
-     * @param id id of view
-     */
+     * 含有Bundle通过Class跳转界面
+     **/
+    public void startActivity(Class<?> cls, Bundle bundle)
+    {
+        if (null == cls) {
+            return;
+        }
+
+        Intent intent = new Intent();
+        intent.setClass(context, cls);
+        if (bundle != null) {
+            intent.putExtras(bundle);
+        }
+        startActivity(intent);
+    }
+
     protected void attachClickListener(int id) {
         if (contentView != null) {
             View view = contentView.findViewById(id);
@@ -137,6 +155,24 @@ public abstract class BaseMvpFragment<P extends BasePresenter>
         }
     }
 
+    protected void attachClickListener(View view) {
+        if (contentView != null) {
+            if (view != null) {
+                view.setOnClickListener(vclickListener);
+            }
+        }
+    }
+
+    private OnOnceClickListener vclickListener = new OnOnceClickListener() {
+        @Override
+        public void onOnceClick(View v) {
+            onViewClicked(v);
+        }
+    };
+
+    protected void onViewClicked(View view) {
+    }
+
     private OnOnceClickListener clickListener = new OnOnceClickListener() {
         @Override
         public void onOnceClick(View v) {
@@ -144,14 +180,7 @@ public abstract class BaseMvpFragment<P extends BasePresenter>
         }
     };
 
-    /**
-     * Clicked views' implementation
-     *
-     * @param view which view has clicked
-     * @param id   id of view
-     */
     protected void onViewClicked(View view, int id) {
-
     }
 
     public NavigationBar getNavigationBar() {

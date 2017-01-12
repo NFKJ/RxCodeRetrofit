@@ -10,9 +10,9 @@ import com.common.widget.tablayout.TabEntity;
 import com.hulabusiness.R;
 import com.hulabusiness.base.mvp.BaseMvpActivity;
 import com.hulabusiness.base.mvp.BasePresenter;
-import com.hulabusiness.ui.part1.FirstFragment;
-import com.hulabusiness.ui.part2.NextFragment;
-import com.hulabusiness.ui.part3.ThirdFragment;
+import com.hulabusiness.ui.check.CheckFragment;
+import com.hulabusiness.ui.message.MessageFragment;
+import com.hulabusiness.ui.mine.MineFragment;
 
 import java.util.ArrayList;
 
@@ -20,9 +20,9 @@ public class MainActivity extends BaseMvpActivity
 {
     private BottomTabLayout tabLayout;
 
-    private FirstFragment firstFragment;
-    private NextFragment nextFragment;
-    private ThirdFragment thirdFragment;
+    private CheckFragment firstFragment;
+    private MessageFragment nextFragment;
+    private MineFragment thirdFragment;
 
     //模块名
     private String[] mTitles = {"场馆", "课程", "我的"};
@@ -58,9 +58,9 @@ public class MainActivity extends BaseMvpActivity
             mTabEntities.add(new TabEntity(mTitles[i], mIconSelectIds[i], mIconUnSelectIds[i]));
         }
         ArrayList<Fragment> fragments = new ArrayList<>();
-        fragments.add(new FirstFragment());
-        fragments.add(new NextFragment());
-        fragments.add(new ThirdFragment());
+        fragments.add(new CheckFragment());
+        fragments.add(new MessageFragment());
+        fragments.add(new MineFragment());
 
         tabLayout.setTabData(mTabEntities, this, R.id.fragment, fragments);
         tabLayout.setOnTabSelectListener(new OnTabSelectListener() {

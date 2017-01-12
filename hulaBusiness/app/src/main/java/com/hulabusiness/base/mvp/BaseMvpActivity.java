@@ -6,12 +6,18 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
-import com.common.widget.RevealLayout;
+import com.common.rxbus.RxManager;
+import com.common.utils.ActivityStack;
+import com.common.utils.KeyBoardUtils;
+import com.common.utils.ViewUtils;
+import com.common.widget.loadingView.LoadingLayout;
 import com.common.widget.navigation.NavigationBar;
+import com.common.widget.toast.ToastManager;
 import com.hulabusiness.R;
 import com.hulabusiness.base.listener.OnOnceClickListener;
 
@@ -24,12 +30,13 @@ import com.hulabusiness.base.listener.OnOnceClickListener;
 public abstract class BaseMvpActivity<P extends BasePresenter>
         extends FragmentActivity implements BaseView {
 
+    protected RxManager rxManager;
     protected Context context;
     protected P presenter;
 
     protected LayoutInflater m_inflater;
-    protected FrameLayout m_contentView;
-    protected RevealLayout m_root;
+    protected LoadingLayout m_contentView;
+    protected LinearLayout m_root;
     private NavigationBar m_navigationBar;
 
     public NavigationBar getNavigationBar() {
@@ -44,6 +51,7 @@ public abstract class BaseMvpActivity<P extends BasePresenter>
         context = this;
         super.setContentView(R.layout.activity_base);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        rxManager = new RxManager();
 
         initRootView();
         setNavigation();
@@ -55,6 +63,7 @@ public abstract class BaseMvpActivity<P extends BasePresenter>
         View view = m_inflater.inflate(getLayoutId(), m_root, false);
         m_contentView.addView(view);
 
+        ActivityStack.getInstance().addActivity(this);
         onViewCreated();
         doLogicFunc();
     }
@@ -65,8 +74,8 @@ public abstract class BaseMvpActivity<P extends BasePresenter>
 
     private void initRootView() {
         m_inflater = LayoutInflater.from(this);
-        m_root = (RevealLayout) this.findViewById(R.id.root);
-        m_contentView = (FrameLayout) this.findViewById(R.id.appContent);
+        m_root = (LinearLayout) this.findViewById(R.id.root);
+        m_contentView = (LoadingLayout) this.findViewById(R.id.appContent);
         m_navigationBar = (NavigationBar) this.findViewById(R.id.navigationBar);
     }
 
@@ -112,31 +121,58 @@ public abstract class BaseMvpActivity<P extends BasePresenter>
 
     @Override
     public void showToastMsg(String msg) {
-//        ToastManager.shortShow(msg);
+        ToastManager.showShortToast(msg);
     }
 
     @Override
     public void showToastMsg(int resId) {
-//        ToastManager.shortShow(resId);
+        ToastManager.showShortToast(resId);
     }
 
     @Override
     public void showProgressingDialog() {
-
     }
 
     @Override
     public void dismissProgressDialog() {
-
     }
 
     /**
-     * Invoke the method after you have implemented method {@link BaseMvpActivity#onViewClicked(View, int)}
-     *
-     * @param id id of View
+     * 界面返回时主动释放内存
      */
+    @Override
+    public void onBackPressed() {
+        KeyBoardUtils.hideKeyBoard(m_root);
+        clearMemory();
+        super.onBackPressed();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        onBackPressed();
+        return super.onKeyDown(keyCode, event);
+    }
+
+    private void clearMemory() {
+        if (presenter != null) {
+            presenter.detachView();
+        }
+
+        if (null != rxManager) {
+            rxManager.clear();
+        }
+        ActivityStack.getInstance().finishActivity(this);
+        ViewUtils.clearAllChildViews(this);
+    }
+
     protected void attachClickListener(int id) {
         View view = findViewById(id);
+        if (view != null) {
+            view.setOnClickListener(clickListener);
+        }
+    }
+
+    protected void attachClickListener(View view) {
         if (view != null) {
             view.setOnClickListener(clickListener);
         }
@@ -149,21 +185,12 @@ public abstract class BaseMvpActivity<P extends BasePresenter>
         }
     };
 
-    /**
-     * Clicked views' implementation
-     *
-     * @param view which view has clicked
-     * @param id   id of View
-     */
     protected void onViewClicked(View view, int id) {
-
     }
 
     @Override
     protected void onDestroy() {
-        if (presenter != null) {
-            presenter.detachView();
-        }
+        clearMemory();
         super.onDestroy();
     }
 }

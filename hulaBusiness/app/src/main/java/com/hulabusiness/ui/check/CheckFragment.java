@@ -1,9 +1,11 @@
-package com.hulabusiness.ui.part1;
+package com.hulabusiness.ui.check;
 
 import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
+import com.common.widget.editview.DeleteEditText;
+import com.common.widget.navigation.WidgeButton;
 import com.hulabusiness.R;
 import com.hulabusiness.base.mvp.BaseMvpFragment;
 import com.hulabusiness.base.mvp.BasePresenter;
@@ -13,9 +15,11 @@ import com.hulabusiness.base.mvp.BasePresenter;
  * @author: Leo
  * @date: 2016/12/23
  */
-public class FirstFragment extends BaseMvpFragment
+public class CheckFragment extends BaseMvpFragment
 {
+    private DeleteEditText etCode;
     private TextView tvTest;
+    private WidgeButton btnQRCode;
 
     @Override
     protected BasePresenter createPresenterInstance() {
@@ -29,12 +33,16 @@ public class FirstFragment extends BaseMvpFragment
 
     @Override
     protected void setNavigation() {
-        getNavigationBar().setAppWidgeTitle("场馆");
+        getNavigationBar().setAppWidgeTitle("验票");
+        btnQRCode = new WidgeButton(context);
+        btnQRCode.setBackgroundResource(R.mipmap.ic_launcher);
+        getNavigationBar().setRightMenu(btnQRCode);
     }
 
     @Override
     protected void onViewCreated(View view) {
         tvTest = (TextView) view.findViewById(R.id.tv_test);
+        etCode = (DeleteEditText) view.findViewById(R.id.et_code);
     }
 
     @Override
@@ -50,5 +58,12 @@ public class FirstFragment extends BaseMvpFragment
                 startActivity(new Intent(context, FirstTestActivity.class));
             }
         });
+
+        attachClickListener(btnQRCode);
+    }
+
+    @Override
+    protected void onViewClicked(View view) {
+
     }
 }

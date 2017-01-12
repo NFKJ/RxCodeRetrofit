@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/tv_test"
         android:text="Next"
         android:gravity="center"
         android:layout_width="match_parent"

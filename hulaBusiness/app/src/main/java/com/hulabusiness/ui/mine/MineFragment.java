@@ -1,4 +1,4 @@
-package com.hulabusiness.ui.part2;
+package com.hulabusiness.ui.mine;
 
 import android.view.View;
 
@@ -11,7 +11,7 @@ import com.hulabusiness.base.mvp.BasePresenter;
  * @author: Leo
  * @date: 2016/12/23
  */
-public class NextFragment extends BaseMvpFragment
+public class MineFragment extends BaseMvpFragment
 {
     @Override
     protected BasePresenter createPresenterInstance() {
@@ -20,12 +20,12 @@ public class NextFragment extends BaseMvpFragment
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_next;
+        return R.layout.fragment_third;
     }
 
     @Override
     protected void setNavigation() {
-        getNavigationBar().setAppWidgeTitle("课程");
+        getNavigationBar().setAppWidgeTitle("我的");
     }
 
     @Override

@@ -482,7 +482,7 @@ public class NavigationBar extends RelativeLayout
 //                    layoutParams.height = ScreenUtils.getStatusHeight(mContext);
 //                    statusBar.setLayoutParams(layoutParams);
 //                }
-                setVisibility(GONE);
+                setVisibility(VISIBLE);
                 break;
             case Minor:
                 setVisibility(VISIBLE);
